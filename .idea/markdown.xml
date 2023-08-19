@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MarkdownSettings">
+    <option name="autoScrollEnabled" value="false" />
+    <option name="customStylesheetText" value="* {&#10;  font-family: &quot;Fira Code&quot;&#10;}" />
+    <enabledExtensions>
+      <entry key="MermaidLanguageExtension" value="true" />
+      <entry key="PlantUMLLanguageExtension" value="false" />
+    </enabledExtensions>
+    <option name="fontFamily" value="PT Mono" />
+    <option name="fontSize" value="17" />
+    <option name="splitLayout" value="SHOW_EDITOR" />
+    <option name="verticalSplit" value="false" />
+  </component>
+</project>
