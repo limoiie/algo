@@ -2,10 +2,9 @@
 <project version="4">
   <component name="Black">
     <option name="enabledOnReformat" value="true" />
-    <option name="enabledOnSave" value="true" />
     <option name="executionMode" value="BINARY" />
-    <option name="pathToExecutable" value="$USER_HOME$/anaconda3/bin/black" />
-    <option name="sdkUUID" value="cb2c1bf9-4d9f-4c7d-ae1e-0ef6e4ee3e72" />
+    <option name="pathToExecutable" value="$USER_HOME$/Library/Caches/pypoetry/virtualenvs/algo-31AuP-uX-py3.11/bin/black" />
+    <option name="sdkUUID" value="68c9f10c-a494-4b63-a47f-a5f7b1ed177d" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (algo)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (algo)" project-jdk-type="Python SDK" />
 </project>
