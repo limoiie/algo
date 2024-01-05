@@ -2,10 +2,7 @@
 <project version="4">
   <component name="Black">
     <option name="enabledOnReformat" value="true" />
-    <option name="enabledOnSave" value="true" />
     <option name="executionMode" value="BINARY" />
-    <option name="pathToExecutable" value="$USER_HOME$/anaconda3/bin/black" />
-    <option name="sdkName" value="Python 3.7 (algo)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (algo)" project-jdk-type="Python SDK" />
 </project>
