@@ -7,6 +7,8 @@
 - [ ] Heap
 
 - [ ] Tree, Binary Tree, Binary Search Tree
+  - Balance BST
+    - [ ] Day-Stout-Warren Algorithm - reduce height to O(log n)
 
 - [ ] Binary Indexed Tree
 

@@ -67,3 +67,44 @@ def three_way_partition(nums: List[int], l, r, pivot: int):
             j += 1
 
     return i, j
+
+
+def merge_sort_in_place(nums: List[int], l: int, r: int):
+    """
+    In-place merge sort nums[l:r] in ascending order.
+    """
+    if l >= r:
+        return
+
+    m = (l + r) >> 1
+    merge_sort_in_place(nums, l, m)
+    merge_sort_in_place(nums, m, r)
+
+    merge(nums, l, m, r)
+
+
+def merge(nums: List[int], l: int, m: int, r: int):
+    """
+    Merge nums[l:m] and nums[m:r] in ascending order.
+    """
+    i, j = l, m
+    while i < m and j < r:
+        if nums[i] <= nums[j]:
+            i += 1
+        else:
+            nums[i], nums[i + 1 : j + 1] = nums[j], nums[i:j]
+            i, j, m = i + 1, j + 1, m + 1
+
+
+def merge_sort_based(nums: List[int], l: int, r: int):
+    if l >= r:
+        return ...
+
+    m = (l + r) >> 1
+    merge_sort_based(nums, l, m)
+    merge_sort_based(nums, m, r)
+
+    ...  # compute properties from the sorted nums[l:m] and nums[m:r]
+
+    merge(nums, l, m, r)
+    return ...

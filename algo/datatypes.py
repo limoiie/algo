@@ -58,7 +58,7 @@ def mt(nodes: List[Optional[int]]) -> Optional[TreeNode]:
         node = layer.popleft()
 
         left_child = mn(nodes[i])
-        right_child = mn(nodes[i + 1])
+        right_child = mn(nodes[i + 1]) if i + 1 < n else None
 
         if node:
             node.left = left_child

@@ -3,9 +3,29 @@ from typing import List
 
 class FenwickTree:
     """
-    A Fenwick tree or binary indexed tree (BIT) is a data structure
-    that can efficiently update values and calculate prefix sums
-    in an array of values.
+      A Fenwick tree or binary indexed tree (BIT) is a data structure
+      that can efficiently update values and calculate prefix sums
+      in an array of values.
+
+      0
+     0000
+    (0,0]
+      |------+------------+------------------------+
+      1      2            4                        8
+     0001   0010         0100                     1000
+    (0,1]  (0,2]        (0,4]                    (0,8]
+             |            |------+                 |------+------+
+             3            5      6                 9      10     12
+            0011         0101   0110              1001   1010   1100
+           (2,3]        (4,5]  (4,6]             (8,9]  (8,10] (8,12]
+                          |                               |      |-------+
+                          7                               11     13      14
+                         0111                            1011   1101    1110
+                        (6,7]                          (10,11] (12,13] (12,14]
+                                                                         |
+                                                                         15
+                                                                        1111
+                                                                       (14,15]
     """
 
     def __init__(self, n: int):
