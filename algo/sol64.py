@@ -1,20 +1,21 @@
+import math
+
 from algo import *
 
 
 # noinspection PyPep8Naming,PyMethodMayBeStatic
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
-    def uniquePaths(self, m: int, n: int) -> int:
-        dp = [[0] * n for _ in range(m)]
-        dp[0][0] = 1
-
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        m, n = len(grid), len(grid[0])
+        dp = [[math.inf] * n for _ in range(m)]
+        dp[0][0] = grid[0][0]
         for i in range(m):
             for j in range(n):
                 if i != 0:
-                    dp[i][j] += dp[i - 1][j]
+                    dp[i][j] = min(dp[i - 1][j] + grid[i][j], dp[i][j])
                 if j != 0:
-                    dp[i][j] += dp[i][j - 1]
-
+                    dp[i][j] = min(dp[i][j - 1] + grid[i][j], dp[i][j])
         return dp[m - 1][n - 1]
 
 
@@ -22,13 +23,13 @@ class Solution:
 
 
 _cases = [
-    TestCase(args=(3, 7), expected=28),
-    TestCase(args=(3, 2), expected=3),
+    TestCase(args=([[1, 3, 1], [1, 5, 1], [4, 2, 1]],), expected=7),
+    TestCase(args=([[1, 2, 3], [4, 5, 6]],), expected=12),
 ]
 
 
 @pytest.mark.parametrize("case", _cases)
 def test_solution(case):
     sol = Solution()
-    output = sol.uniquePaths(*case.args)
+    output = sol.minPathSum(*case.args)
     assert output == case.expected
