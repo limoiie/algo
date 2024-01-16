@@ -3,9 +3,14 @@ from typing import List
 
 class FenwickTree:
     """
-      A Fenwick tree or binary indexed tree (BIT) is a data structure
-      that can efficiently update values and calculate prefix sums
-      in an array of values.
+    Fenwick Tree Implementation.
+
+    What is a Fenwick Tree?
+    =======================
+
+    A Fenwick tree or binary indexed tree (BIT)
+    is a data structure that can efficiently update values and calculate prefix sums
+    in an array of values.
 
       0
      0000
@@ -26,6 +31,21 @@ class FenwickTree:
                                                                          15
                                                                         1111
                                                                        (14,15]
+
+    Complexity
+    ==========
+
+    Time complexity:
+
+    - Construction: O(n log n)
+
+    - Query: O(log n)
+
+    - Update: O(log n)
+
+    Space complexity: O(n)
+
+    Here, "n" represents the total number of elements.
     """
 
     def __init__(self, n: int):
@@ -34,6 +54,10 @@ class FenwickTree:
     def query(self, i: int):
         """
         Query the sum of A[0, i), the first i elements.
+
+        Time complexity: O(log n)
+
+        :param i: the first i elements, 1-based
         """
         acc = 0
         while i > 0:
@@ -44,6 +68,11 @@ class FenwickTree:
     def update(self, i: int, val: int):
         """
         Update A[i], the i-th element, with the value val.
+
+        Time complexity: O(log n)
+
+        :param i: the i-th element, 0-based
+        :param val: the value to be added to A[i]
         """
         i += 1
         while i < len(self.tree):
